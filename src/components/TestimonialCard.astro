@@ -1,0 +1,20 @@
+---
+interface Props {
+  name: string;
+  quote: string;
+  stars?: number;
+}
+
+const { name, quote, stars = 5 } = Astro.props;
+---
+
+<div class="bg-white rounded-2xl p-8 shadow-md reveal border-l-4 border-[#1B8CC4]">
+  <i class="fa-solid fa-quote-left text-[#1B8CC4] text-3xl mb-4 block" aria-hidden="true"></i>
+  <div class="flex gap-1 mb-4">
+    {Array.from({ length: stars }).map(() => (
+      <i class="fa-solid fa-star text-[#F8DA6D] text-sm"></i>
+    ))}
+  </div>
+  <p class="text-gray-600 leading-relaxed mb-5 text-sm">{quote}</p>
+  <p class="font-heading font-black text-[#111111] uppercase tracking-widest text-xs">{name}</p>
+</div>

@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #1570A6;
+  --color-brand-blue-vivid: #1B8CC4;
+  --color-brand-blue-dk: #0D2B45;
+  --color-brand-green: #2D7034;
+  --color-brand-green-dk: #1a4a1e;
+  --color-brand-green-lt: #3d8f44;
+  --color-brand-yellow: #F8DA6D;
+  --color-brand-yellow-dk: #D4A017;
+  --color-brand-cream: #F0F9FF;
+  --color-brand-charcoal: #1C1C1C;
+
+  --font-heading: "Nunito Sans", sans-serif;
+  --font-body: "Nunito Sans", sans-serif;
+}
+
+/* Owner callout curly arrow nudge (points up-left toward the subject) */
+.owner-arrow {
+  animation: arrowNudge 1.2s ease-in-out infinite;
+}
+@keyframes arrowNudge {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-8px, -8px); }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #1C1C1C;
+  background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Accessible focus indicator */
+:focus-visible {
+  outline: 3px solid #1570A6;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Hero mesh gradient orbs */
+.mesh-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.orb-green {
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, #2D7034 0%, transparent 70%);
+  top: -20%;
+  left: -10%;
+  opacity: 0.9;
+  animation: orbFloat1 14s ease-in-out infinite;
+}
+.orb-blue {
+  width: 55%;
+  height: 55%;
+  background: radial-gradient(circle, #1B8CC4 0%, transparent 70%);
+  bottom: -15%;
+  right: 0;
+  opacity: 0.75;
+  animation: orbFloat2 11s ease-in-out infinite;
+}
+.orb-yellow {
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, #F8DA6D 0%, transparent 70%);
+  top: 25%;
+  right: 20%;
+  opacity: 0.28;
+  animation: orbFloat3 16s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(8%, 12%) scale(1.06); }
+  66% { transform: translate(-5%, 6%) scale(0.97); }
+}
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-10%, -8%) scale(1.08); }
+  66% { transform: translate(5%, -12%) scale(0.95); }
+}
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-8%, 10%) scale(1.12); }
+}

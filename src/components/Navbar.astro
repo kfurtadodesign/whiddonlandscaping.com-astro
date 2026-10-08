@@ -1,0 +1,117 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#contact', label: 'Contact' },
+];
+---
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50">
+  <nav class="bg-[#0B639D]/95 backdrop-blur-sm px-6 py-3 md:py-5 border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img
+          id="site-logo"
+          src="/images/whiddon-logo.svg"
+          alt="Whiddon Landscaping"
+          class="w-auto h-12 md:h-20 transition-all duration-300"
+        />
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex items-center gap-8">
+        {links.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class="text-[#F8DA6D] font-heading font-bold uppercase tracking-widest text-sm transition-all duration-200 hover:text-white"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- Desktop CTA -->
+      <a
+        href="/#contact"
+        class="hidden md:inline-block bg-[#F8DA6D] hover:bg-[#fff07a] text-[#111111] font-heading font-black uppercase tracking-widest text-sm px-6 py-3 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-md"
+      >
+        Get a Free Quote
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button
+        id="hamburger"
+        class="md:hidden text-[#F8DA6D] focus:outline-none"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars text-xl" id="hamburger-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2 border-t border-white/10 pt-4">
+      <ul class="flex flex-col gap-4">
+        {links.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class="block text-[#F8DA6D] font-heading font-bold uppercase tracking-widest text-sm py-1 hover:text-white"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+        <li class="pt-2">
+          <a
+            href="/#contact"
+            class="block bg-[#F8DA6D] hover:bg-[#fff07a] text-[#111111] font-heading font-black uppercase tracking-widest text-sm px-5 py-3 rounded-full text-center transition-all duration-200"
+          >
+            Get a Free Quote
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+
+  function setMenu(open: boolean) {
+    mobileMenu?.classList.toggle('hidden', !open);
+    if (hamburgerIcon) {
+      hamburgerIcon.className = open ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+    }
+    hamburger?.setAttribute('aria-expanded', String(open));
+  }
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = !mobileMenu?.classList.contains('hidden');
+    setMenu(!isOpen);
+  });
+
+  // Close the menu after tapping a link so anchor navigation isn't hidden behind it.
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setMenu(false));
+  });
+
+  // Header is taller at the top of the page, shrinks once the user scrolls.
+  const nav = document.querySelector('#navbar nav');
+  const logo = document.getElementById('site-logo');
+  // Desktop (md+) header grows at the top and shrinks on scroll.
+  // Mobile stays at the small size at all times (the md: classes don't apply below md).
+  function applyScroll() {
+    const scrolled = window.scrollY > 10;
+    nav?.classList.toggle('md:py-5', !scrolled);
+    logo?.classList.toggle('md:h-20', !scrolled);
+    logo?.classList.toggle('md:h-14', scrolled);
+  }
+  applyScroll();
+  window.addEventListener('scroll', applyScroll, { passive: true });
+</script>
