@@ -1,0 +1,13 @@
+{
+  "shape": "brand-only",
+  "pkg": ".",
+  "outDir": "ds-bundle",
+  "namespace": "WhiddonBrand",
+  "readmeHeader": ".design-sync/conventions.md",
+  "offScript": {
+    "reason": "Astro site - .astro components cannot compile to a browser-renderable component bundle, so package-build.mjs does not apply. The upload layout is produced by hand.",
+    "generator": ".design-sync/gen-utilities.mjs",
+    "gate": ".design-sync/validate-brand.mjs",
+    "emitsSyncAnchor": false
+  }
+}
