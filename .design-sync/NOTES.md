@@ -75,3 +75,15 @@ Both halves have been negative-tested — they do fail when they should.
 - Node 24.18.1 (repo pins `engines.node >= 22.12.0`); `package-lock.json` →
   `npm ci`. `node_modules` was already installed and was not reinstalled.
 - `ds-bundle/` is gitignored — it is regenerable output.
+
+## Upload record
+
+- Project: **Whiddon Landscaping Brand**
+  (`c554a5a6-bc97-4a9d-901e-be5d339ba3d4`) — created 2026-10-08, pinned in
+  `config.json`. The pin is what keeps a future `/design-sync` run updating
+  this project instead of creating a duplicate.
+- Uploaded 8 files + the `_ds_needs_recompile` sentinel. Remote matched local
+  exactly, so no reconciliation deletes were needed.
+- No `_ds_sync.json` anchor was written (see above), so the next sync
+  re-verifies and re-uploads everything. For a bundle this size that is
+  cheap and is the honest state.
