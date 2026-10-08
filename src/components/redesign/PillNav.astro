@@ -1,0 +1,100 @@
+---
+const links = [
+  { href: '#about', label: 'About' },
+  { href: '#services', label: 'Services' },
+  { href: '#process', label: 'Process' },
+  { href: '#areas', label: 'Areas' },
+];
+---
+
+<header class="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
+  <nav
+    class="w-full max-w-[1280px] flex items-center justify-between gap-4 pl-6 pr-2.5 py-2.5 rounded-full bg-brand-ink-deep/55 backdrop-blur-[16px] border border-white/10"
+  >
+    <a href="#top" class="flex items-center shrink-0" aria-label="Whiddon Landscaping home">
+      <img src="/images/whiddon-logo.svg" alt="Whiddon Landscaping" class="h-10 w-auto block" />
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden lg:flex items-center gap-7">
+      {links.map(link => (
+        <a
+          href={link.href}
+          class="text-white font-heading font-extrabold text-xs tracking-[0.2em] uppercase hover:text-brand-yellow transition-colors duration-200"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <div class="flex items-center gap-2.5">
+      <a
+        href="tel:+14704433344"
+        class="flex items-center justify-center w-11 h-11 rounded-full border border-white/25 text-white hover:bg-white/10 transition-colors duration-200"
+        aria-label="Call (470) 443-3344"
+      >
+        <i class="fa-solid fa-phone text-sm"></i>
+      </a>
+      <a
+        href="#contact"
+        class="hidden sm:inline-block bg-brand-yellow hover:bg-brand-yellow-lt text-brand-ink font-heading font-black text-xs tracking-[0.2em] uppercase px-6 py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5"
+      >
+        Get a Free Quote
+      </a>
+      <!-- Mobile hamburger -->
+      <button
+        id="wl-hamburger"
+        type="button"
+        class="lg:hidden flex items-center justify-center w-11 h-11 rounded-full text-brand-yellow"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="wl-mobile-menu"
+      >
+        <i class="fa-solid fa-bars text-xl" id="wl-hamburger-icon"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile menu panel -->
+<div
+  id="wl-mobile-menu"
+  class="hidden fixed top-24 left-4 right-4 z-40 rounded-3xl bg-brand-ink-deep/95 backdrop-blur-[16px] border border-white/10 p-6"
+>
+  <ul class="flex flex-col gap-5">
+    {links.map(link => (
+      <li>
+        <a
+          href={link.href}
+          class="block text-white font-heading font-extrabold text-sm tracking-[0.2em] uppercase hover:text-brand-yellow transition-colors duration-200"
+        >
+          {link.label}
+        </a>
+      </li>
+    ))}
+    <li>
+      <a
+        href="#contact"
+        class="block text-center bg-brand-yellow hover:bg-brand-yellow-lt text-brand-ink font-heading font-black text-xs tracking-[0.2em] uppercase px-6 py-4 rounded-full transition-colors duration-200"
+      >
+        Get a Free Quote
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script>
+  const btn = document.getElementById('wl-hamburger');
+  const panel = document.getElementById('wl-mobile-menu');
+  const icon = document.getElementById('wl-hamburger-icon');
+
+  function setMenu(open: boolean) {
+    panel?.classList.toggle('hidden', !open);
+    if (icon) icon.className = open ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+    btn?.setAttribute('aria-expanded', String(open));
+  }
+
+  btn?.addEventListener('click', () => setMenu(panel?.classList.contains('hidden') ?? true));
+  // Close after tapping a link so anchor navigation isn't hidden behind the panel.
+  panel?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+</script>

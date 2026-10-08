@@ -12,6 +12,19 @@
   --color-brand-cream: #F0F9FF;
   --color-brand-charcoal: #1C1C1C;
 
+  /* Surface tokens — named to match the synced design system
+     (ds-bundle/tokens/brand.css). The site previously wrote these as
+     arbitrary hex (bg-[#111111], bg-[#0D1B2A], ...). */
+  --color-brand-blue-nav: #0B639D;
+  --color-brand-ink: #111111;
+  --color-brand-ink-deep: #0A0A0A;
+  --color-brand-forest: #071A09;
+  --color-brand-navy: #0D1B2A;
+  --color-brand-yellow-lt: #fff07a;
+  --color-brand-sky-100: #EFF6FF;
+  --color-brand-sky-200: #E0F2FE;
+  --color-brand-sky-300: #dbeafe;
+
   --font-heading: "Nunito Sans", sans-serif;
   --font-body: "Nunito Sans", sans-serif;
 }
@@ -107,4 +120,28 @@ h1, h2, h3, h4 {
 @keyframes orbFloat3 {
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(-8%, 10%) scale(1.12); }
+}
+
+/* ---- Homepage redesign ---- */
+
+/* Service marquee strip. The list is duplicated in the markup, so a -50%
+   translate loops seamlessly. */
+@keyframes wlMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.wl-marquee {
+  animation: wlMarquee 40s linear infinite;
+}
+
+/* Hide the number spinner / keep textarea resize vertical only */
+.wl-form textarea { resize: vertical; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wl-marquee,
+  .mesh-orb,
+  .owner-arrow {
+    animation: none;
+  }
+  html { scroll-behavior: auto; }
 }

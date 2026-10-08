@@ -1,0 +1,110 @@
+---
+const features = [
+  {
+    icon: 'fa-house-chimney',
+    title: 'Family-Owned & Local',
+    desc: 'A local business that cares about the community it serves.',
+  },
+  {
+    icon: 'fa-clock',
+    title: 'Reliable & On-Time',
+    desc: 'We show up when we say we will, every single time.',
+  },
+  {
+    icon: 'fa-tag',
+    title: 'Affordable Pricing',
+    desc: 'Fair, transparent pricing with no hidden fees.',
+  },
+  {
+    icon: 'fa-thumbs-up',
+    title: 'Satisfaction Guaranteed',
+    desc: 'Your satisfaction is our top priority on every job.',
+  },
+];
+
+const areas = [
+  'East Atlanta', 'Decatur', 'Kirkwood', 'Edgewood', 'Candler Park',
+  'Little Five Points', 'Reynoldstown', 'Cabbagetown', 'Grant Park',
+  'Ormewood Park', 'East Lake', 'Oakhurst', 'Avondale Estates', 'Clarkston',
+];
+---
+
+<section id="areas" class="bg-white py-32 px-6 scroll-mt-24">
+  <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-18">
+    <!-- Left: why choose us -->
+    <div>
+      <p
+        class="text-brand-blue-vivid font-heading font-black text-lg tracking-[0.25em] uppercase mb-5"
+      >
+        The Whiddon Difference
+      </p>
+      <h2
+        class="font-heading font-black text-brand-ink uppercase text-[clamp(40px,5vw,80px)] leading-[0.9] tracking-[-0.03em] mb-12"
+      >
+        Why Choose Us?
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-9">
+        {features.map(feature => (
+          <div class="reveal">
+            <i class={`fa-solid ${feature.icon} text-brand-green text-[22px] mb-4 block`}></i>
+            <h3
+              class="font-heading font-black text-brand-ink text-lg uppercase tracking-[-0.01em] mb-2"
+            >
+              {feature.title}
+            </h3>
+            <p class="text-gray-500 text-[15px] leading-relaxed">{feature.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Right: map card -->
+    <div
+      class="reveal relative overflow-hidden rounded-3xl bg-brand-forest px-10 py-12 min-h-[520px]"
+    >
+      <div class="absolute -inset-[60px] pointer-events-none" aria-hidden="true">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-84.55%2C33.62%2C-84.15%2C33.88&layer=mapnik"
+          class="w-full h-full border-0 grayscale invert contrast-90 brightness-90"
+          title="Metro Atlanta service area map"
+          loading="lazy"
+          tabindex="-1"
+        ></iframe>
+      </div>
+      <div
+        class="absolute inset-0 pointer-events-none bg-[linear-gradient(160deg,rgba(7,26,9,0.92)_0%,rgba(7,26,9,0.72)_45%,rgba(26,74,30,0.55)_100%)]"
+        aria-hidden="true"
+      >
+      </div>
+      <!-- Decorative location dot, pinned over East Atlanta. -->
+      <span
+        class="absolute right-10 top-12 w-[18px] h-[18px] rounded-full bg-brand-yellow shadow-[0_0_0_8px_rgba(248,218,109,0.25),0_0_0_18px_rgba(248,218,109,0.1)]"
+        aria-hidden="true"
+      >
+      </span>
+
+      <div class="relative z-10">
+        <p class="text-brand-yellow font-heading font-black text-lg tracking-[0.25em] uppercase mb-5">
+          Where We Work
+        </p>
+        <h3
+          class="font-heading font-black text-white uppercase text-[clamp(28px,3vw,44px)] leading-[0.95] tracking-[-0.03em] mb-4"
+        >
+          Serving Metro Atlanta + Surrounding Areas
+        </h3>
+        <p class="text-gray-400 text-base leading-relaxed mb-8">
+          We proudly serve homeowners across these neighborhoods and beyond.
+        </p>
+        <div class="flex flex-wrap gap-2.5">
+          {areas.map(area => (
+            <span
+              class="bg-brand-green hover:bg-brand-green-lt text-white font-heading font-bold text-xs tracking-[0.08em] uppercase px-[18px] py-2.5 rounded-full transition-colors duration-200"
+            >
+              {area}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,95 @@
+/*
+ * Whiddon Landscaping — base styles and signature effects
+ * Ported from src/styles/global.css. See the .reveal note below for the
+ * one deliberate behavioral change.
+ */
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-brand-charcoal);
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-heading); }
+
+/* Accessible focus indicator — brand blue, always keep this */
+:focus-visible {
+  outline: 3px solid var(--color-brand-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/*
+ * Hero mesh-gradient orbs. Place three absolutely-positioned divs inside a
+ * `position: relative; overflow: hidden` parent that has a dark background:
+ *   <div class="mesh-orb orb-green"></div>  (+ orb-blue, orb-yellow)
+ * Self-contained — pure CSS animation, no JavaScript.
+ */
+.mesh-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.orb-green {
+  width: 70%; height: 70%;
+  background: radial-gradient(circle, var(--color-brand-green) 0%, transparent 70%);
+  top: -20%; left: -10%;
+  opacity: 0.9;
+  animation: orbFloat1 14s ease-in-out infinite;
+}
+.orb-blue {
+  width: 55%; height: 55%;
+  background: radial-gradient(circle, var(--color-brand-blue-vivid) 0%, transparent 70%);
+  bottom: -15%; right: 0;
+  opacity: 0.75;
+  animation: orbFloat2 11s ease-in-out infinite;
+}
+.orb-yellow {
+  width: 40%; height: 40%;
+  background: radial-gradient(circle, var(--color-brand-yellow) 0%, transparent 70%);
+  top: 25%; right: 20%;
+  opacity: 0.28;
+  animation: orbFloat3 16s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(8%, 12%) scale(1.06); }
+  66% { transform: translate(-5%, 6%) scale(0.97); }
+}
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-10%, -8%) scale(1.08); }
+  66% { transform: translate(5%, -12%) scale(0.95); }
+}
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-8%, 10%) scale(1.12); }
+}
+
+/* Curly-arrow nudge used by the owner callout */
+.owner-arrow { animation: arrowNudge 1.2s ease-in-out infinite; }
+@keyframes arrowNudge {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-8px, -8px); }
+}
+
+/*
+ * .reveal — DELIBERATELY NEUTRALIZED.
+ *
+ * On the live site .reveal starts at opacity:0 and an IntersectionObserver in
+ * Layout.astro adds .visible to fade it in on scroll. A rendered design has no
+ * such observer, so the site's version of this rule would leave the content
+ * permanently invisible. It is shipped as a visible no-op so that markup copied
+ * from the site still renders. Do not use it for new work; it carries no
+ * styling. To animate on scroll in a design, write the observer explicitly.
+ */
+.reveal, .reveal.visible {
+  opacity: 1;
+  transform: none;
+}

@@ -1,0 +1,38 @@
+---
+---
+
+<!--
+  Fixed bottom-right quote button. It stays hidden while the hero is on screen:
+  the hero already carries its own "Get a Free Quote" CTA, and at the hero's
+  bottom bar the floating button sits directly on top of the trust pills —
+  badly so on mobile. It fades in once the hero has scrolled past.
+-->
+<a
+  id="wl-floating-cta"
+  href="#contact"
+  class="fixed right-6 bottom-6 z-60 inline-flex items-center gap-3 bg-brand-yellow hover:bg-brand-yellow-lt text-brand-ink font-heading font-black text-[13px] tracking-[0.2em] uppercase px-[26px] py-[18px] rounded-full shadow-[0_12px_32px_rgba(0,0,0,0.35)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-0.5 opacity-0 translate-y-4 pointer-events-none"
+>
+  Get a Free Quote <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+<script>
+  const cta = document.getElementById('wl-floating-cta');
+  const hero = document.getElementById('top');
+
+  function show(on: boolean) {
+    cta?.classList.toggle('opacity-0', !on);
+    cta?.classList.toggle('translate-y-4', !on);
+    cta?.classList.toggle('pointer-events-none', !on);
+  }
+
+  if (hero && cta) {
+    // Reveal the button only once the hero is out of view.
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(entry => show(!entry.isIntersecting)),
+      { threshold: 0 },
+    );
+    observer.observe(hero);
+  } else {
+    show(true);
+  }
+</script>

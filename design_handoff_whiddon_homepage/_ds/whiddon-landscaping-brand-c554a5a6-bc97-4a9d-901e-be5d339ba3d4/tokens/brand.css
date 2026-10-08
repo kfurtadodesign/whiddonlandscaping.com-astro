@@ -1,0 +1,46 @@
+/*
+ * Whiddon Landscaping — brand tokens
+ *
+ * Source of truth: src/styles/global.css (@theme block) in the
+ * whiddonlandscaping.com-astro repo. Declared here as plain custom
+ * properties on :root so they resolve in any rendering context,
+ * with or without a Tailwind build step.
+ */
+
+:root {
+  /* ---- Core palette (1:1 with the repo's @theme block) ---- */
+  --color-brand-blue: #1570A6;        /* primary blue — links, light-section eyebrows */
+  --color-brand-blue-vivid: #1B8CC4;  /* brighter blue — accents, icons, card rules */
+  --color-brand-blue-dk: #0D2B45;     /* deep navy blue — text on yellow chips */
+  --color-brand-green: #2D7034;       /* primary green — image placeholders, area pills */
+  --color-brand-green-dk: #1a4a1e;    /* deep green */
+  --color-brand-green-lt: #3d8f44;    /* lighter green — pill hover */
+  --color-brand-yellow: #F8DA6D;      /* signature yellow — primary CTA, dark-section eyebrows */
+  --color-brand-yellow-dk: #D4A017;   /* amber */
+  --color-brand-cream: #F0F9FF;       /* palest blue tint — light section wash */
+  --color-brand-charcoal: #1C1C1C;    /* body text */
+
+  /* ---- Surface palette (named at sync time; see note below) ---- */
+  --color-brand-blue-nav: #0B639D;    /* the fixed header's blue */
+  --color-brand-ink: #111111;         /* dark section background, text on yellow */
+  --color-brand-ink-deep: #0A0A0A;    /* hero gradient stops */
+  --color-brand-forest: #071A09;      /* hero backdrop behind the orbs */
+  --color-brand-navy: #0D1B2A;        /* service-areas section background */
+  --color-brand-yellow-lt: #fff07a;   /* yellow CTA hover */
+  --color-brand-sky-100: #EFF6FF;     /* icon medallion background */
+  --color-brand-sky-200: #E0F2FE;     /* pale blue tint */
+  --color-brand-sky-300: #dbeafe;     /* pale blue tint */
+
+  /* ---- Type ---- */
+  --font-heading: "Nunito Sans", sans-serif;
+  --font-body: "Nunito Sans", sans-serif;
+}
+
+/*
+ * NOTE: the "Surface palette" group above has no counterpart in the repo's
+ * @theme block — the site writes those colors as arbitrary hex values
+ * (bg-[#111111], bg-[#0D1B2A], ...). They are named here because they carry
+ * half the page's surface design and the design agent needs a name for them.
+ * Values are taken verbatim from src/pages/index.astro, Navbar.astro and
+ * Footer.astro.
+ */

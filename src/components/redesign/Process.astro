@@ -1,0 +1,109 @@
+---
+const steps = [
+  {
+    num: '01',
+    icon: 'fa-phone',
+    title: 'Call or Request Online',
+    desc: 'Reach out by phone or our quote form.',
+    inverted: false,
+  },
+  {
+    num: '02',
+    icon: 'fa-clipboard-check',
+    title: 'Free Assessment',
+    desc: 'We evaluate your property and give a no-obligation quote.',
+    inverted: false,
+  },
+  {
+    num: '03',
+    icon: 'fa-calendar-check',
+    title: 'Schedule Your Service',
+    desc: 'Pick a time that works for you.',
+    inverted: false,
+  },
+  {
+    num: '04',
+    icon: 'fa-mug-hot',
+    title: 'Enjoy Your Property',
+    desc: 'Sit back while we do the work.',
+    inverted: true,
+  },
+];
+---
+
+<section id="process" class="bg-brand-cream py-32 px-6 scroll-mt-24">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="flex flex-wrap justify-between items-end gap-8 mb-14">
+      <div>
+        <p
+          class="text-brand-blue-vivid font-heading font-black text-lg tracking-[0.25em] uppercase mb-5"
+        >
+          The Process
+        </p>
+        <h2
+          class="font-heading font-black text-brand-ink uppercase text-[clamp(40px,5vw,80px)] leading-[0.9] tracking-[-0.03em]"
+        >
+          How It Works
+        </h2>
+      </div>
+      <p class="max-w-[380px] text-gray-500 text-base leading-relaxed">
+        Getting started is simple. Here's what to expect.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {steps.map(step => (
+        <div
+          class:list={[
+            'reveal group flex flex-col justify-between min-h-[300px] rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(13,43,69,0.12)]',
+            step.inverted ? 'bg-brand-navy' : 'bg-white',
+          ]}
+        >
+          <div class="flex items-start justify-between gap-4">
+            <span
+              class:list={[
+                'flex items-center justify-center w-14 h-14 rounded-full shrink-0',
+                step.inverted ? 'bg-brand-yellow' : 'bg-brand-sky-100',
+              ]}
+            >
+              <i
+                class:list={[
+                  'fa-solid text-xl',
+                  step.icon,
+                  step.inverted ? 'text-brand-ink' : 'text-brand-blue-vivid',
+                ]}
+              >
+              </i>
+            </span>
+            <span
+              class:list={[
+                'font-heading font-black text-[64px] leading-none tracking-[-0.04em]',
+                step.inverted ? 'text-white/15' : 'text-brand-sky-300',
+              ]}
+            >
+              {step.num}
+            </span>
+          </div>
+          <div>
+            <h3
+              class:list={[
+                'font-heading font-black text-[22px] uppercase tracking-[-0.01em] mb-2.5',
+                step.inverted ? 'text-white' : 'text-brand-ink',
+              ]}
+            >
+              {step.title}
+            </h3>
+            <p
+              class:list={[
+                'text-[15px] leading-relaxed',
+                step.inverted ? 'text-gray-400' : 'text-gray-500',
+              ]}
+            >
+              {step.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

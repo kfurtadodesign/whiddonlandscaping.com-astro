@@ -1,0 +1,76 @@
+/*
+ * Whiddon Landscaping - brand utility classes
+ *
+ * Tailwind generates the bg-, text-, and border- brand color classes from the
+ * @theme block at build time. A rendered design does not run this repo's
+ * Tailwind build, so the same class names are declared here as plain CSS.
+ * That makes the vocabulary in README.md resolve in every context.
+ * Generated from tokens/brand.css - keep in step with it.
+ */
+
+.bg-brand-blue { background-color: var(--color-brand-blue); }
+.text-brand-blue { color: var(--color-brand-blue); }
+.border-brand-blue { border-color: var(--color-brand-blue); }
+.bg-brand-blue-vivid { background-color: var(--color-brand-blue-vivid); }
+.text-brand-blue-vivid { color: var(--color-brand-blue-vivid); }
+.border-brand-blue-vivid { border-color: var(--color-brand-blue-vivid); }
+.bg-brand-blue-dk { background-color: var(--color-brand-blue-dk); }
+.text-brand-blue-dk { color: var(--color-brand-blue-dk); }
+.border-brand-blue-dk { border-color: var(--color-brand-blue-dk); }
+.bg-brand-green { background-color: var(--color-brand-green); }
+.text-brand-green { color: var(--color-brand-green); }
+.border-brand-green { border-color: var(--color-brand-green); }
+.bg-brand-green-dk { background-color: var(--color-brand-green-dk); }
+.text-brand-green-dk { color: var(--color-brand-green-dk); }
+.border-brand-green-dk { border-color: var(--color-brand-green-dk); }
+.bg-brand-green-lt { background-color: var(--color-brand-green-lt); }
+.text-brand-green-lt { color: var(--color-brand-green-lt); }
+.border-brand-green-lt { border-color: var(--color-brand-green-lt); }
+.bg-brand-yellow { background-color: var(--color-brand-yellow); }
+.text-brand-yellow { color: var(--color-brand-yellow); }
+.border-brand-yellow { border-color: var(--color-brand-yellow); }
+.bg-brand-yellow-dk { background-color: var(--color-brand-yellow-dk); }
+.text-brand-yellow-dk { color: var(--color-brand-yellow-dk); }
+.border-brand-yellow-dk { border-color: var(--color-brand-yellow-dk); }
+.bg-brand-cream { background-color: var(--color-brand-cream); }
+.text-brand-cream { color: var(--color-brand-cream); }
+.border-brand-cream { border-color: var(--color-brand-cream); }
+.bg-brand-charcoal { background-color: var(--color-brand-charcoal); }
+.text-brand-charcoal { color: var(--color-brand-charcoal); }
+.border-brand-charcoal { border-color: var(--color-brand-charcoal); }
+.bg-brand-blue-nav { background-color: var(--color-brand-blue-nav); }
+.text-brand-blue-nav { color: var(--color-brand-blue-nav); }
+.border-brand-blue-nav { border-color: var(--color-brand-blue-nav); }
+.bg-brand-ink { background-color: var(--color-brand-ink); }
+.text-brand-ink { color: var(--color-brand-ink); }
+.border-brand-ink { border-color: var(--color-brand-ink); }
+.bg-brand-ink-deep { background-color: var(--color-brand-ink-deep); }
+.text-brand-ink-deep { color: var(--color-brand-ink-deep); }
+.border-brand-ink-deep { border-color: var(--color-brand-ink-deep); }
+.bg-brand-forest { background-color: var(--color-brand-forest); }
+.text-brand-forest { color: var(--color-brand-forest); }
+.border-brand-forest { border-color: var(--color-brand-forest); }
+.bg-brand-navy { background-color: var(--color-brand-navy); }
+.text-brand-navy { color: var(--color-brand-navy); }
+.border-brand-navy { border-color: var(--color-brand-navy); }
+.bg-brand-yellow-lt { background-color: var(--color-brand-yellow-lt); }
+.text-brand-yellow-lt { color: var(--color-brand-yellow-lt); }
+.border-brand-yellow-lt { border-color: var(--color-brand-yellow-lt); }
+.bg-brand-sky-100 { background-color: var(--color-brand-sky-100); }
+.text-brand-sky-100 { color: var(--color-brand-sky-100); }
+.border-brand-sky-100 { border-color: var(--color-brand-sky-100); }
+.bg-brand-sky-200 { background-color: var(--color-brand-sky-200); }
+.text-brand-sky-200 { color: var(--color-brand-sky-200); }
+.border-brand-sky-200 { border-color: var(--color-brand-sky-200); }
+.bg-brand-sky-300 { background-color: var(--color-brand-sky-300); }
+.text-brand-sky-300 { color: var(--color-brand-sky-300); }
+.border-brand-sky-300 { border-color: var(--color-brand-sky-300); }
+
+/* Type families */
+.font-heading { font-family: var(--font-heading); }
+.font-body { font-family: var(--font-body); }
+
+/* Hover pairs the site actually uses */
+.hover\:bg-brand-yellow-lt:hover { background-color: var(--color-brand-yellow-lt); }
+.hover\:bg-brand-green-lt:hover { background-color: var(--color-brand-green-lt); }
+.hover\:text-brand-blue-vivid:hover { color: var(--color-brand-blue-vivid); }

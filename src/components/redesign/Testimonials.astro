@@ -1,0 +1,50 @@
+---
+const cards = [
+  { name: 'Shawn T.', quote: 'Very professional and reliable. My lawn has never looked this good!' },
+  { name: 'LaTanya M.', quote: 'Great communication and quality work. Will definitely use again!' },
+  { name: 'Chandler G.', quote: 'Showed up on time, did excellent work, and the price was fair.' },
+];
+---
+
+<section class="bg-brand-navy py-32 px-6">
+  <div class="max-w-[1280px] mx-auto">
+    <p class="text-brand-yellow font-heading font-black text-lg tracking-[0.25em] uppercase mb-10">
+      Don't Take Our Word For It
+    </p>
+
+    <!-- Featured quote -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 mb-16 items-end">
+      <blockquote
+        class="reveal font-heading font-black text-white uppercase text-[clamp(32px,4.4vw,64px)] leading-[1.02] tracking-[-0.03em]"
+      >
+        &ldquo;Taylor does amazing work! My yard looks better than it
+        <span class="text-brand-yellow">ever has.</span>&rdquo;
+      </blockquote>
+      <div class="reveal">
+        <div class="flex gap-1.5 mb-4">
+          {[1, 2, 3, 4, 5].map(() => <i class="fa-solid fa-star text-brand-yellow"></i>)}
+        </div>
+        <p class="font-heading font-black text-white text-sm tracking-[0.2em] uppercase mb-4">
+          JoAnn C.
+        </p>
+        <p class="text-gray-400 text-base leading-relaxed max-w-[380px]">
+          Real reviews from real homeowners across Metro Atlanta + Surrounding Areas.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {cards.map(card => (
+        <div class="reveal rounded-3xl border border-white/[0.12] bg-white/[0.03] p-8">
+          <div class="flex gap-1 mb-4">
+            {[1, 2, 3, 4, 5].map(() => <i class="fa-solid fa-star text-brand-yellow text-xs"></i>)}
+          </div>
+          <p class="text-gray-200 text-[17px] leading-relaxed mb-6">{card.quote}</p>
+          <p class="text-gray-400 font-heading font-black text-xs tracking-[0.2em] uppercase">
+            {card.name}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

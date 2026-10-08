@@ -1,0 +1,88 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-brand-ink-deep border-t border-white/[0.08] pt-20 px-6 pb-8">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+      <div>
+        <a href="#top" class="inline-flex items-center mb-5" aria-label="Whiddon Landscaping home">
+          <img src="/images/whiddon-logo.svg" alt="Whiddon Landscaping" class="h-12 w-auto" />
+        </a>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-[320px]">
+          Lawn maintenance and exterior home upkeep in East Atlanta, Decatur, Kirkwood, and Metro
+          Atlanta + Surrounding Areas.
+        </p>
+      </div>
+
+      <div>
+        <h3
+          class="font-heading font-black text-brand-yellow text-xs tracking-[0.2em] uppercase mb-5"
+        >
+          Quick Links
+        </h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="#top" class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Home</a>
+          </li>
+          <li>
+            <a href="#services" class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Services</a>
+          </li>
+          <li>
+            <a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">Get a Quote</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3
+          class="font-heading font-black text-brand-yellow text-xs tracking-[0.2em] uppercase mb-5"
+        >
+          Contact Us
+        </h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="tel:+14704433344" class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">
+              (470) 443-3344
+            </a>
+          </li>
+          <li>
+            <a href="mailto:whiddonllc@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-200 text-sm">
+              whiddonllc@gmail.com
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/whiddonlandscaping"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-brand-blue-vivid hover:text-white transition-colors duration-200 text-2xl inline-block mt-1"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Giant wordmark -->
+    <p
+      class="font-heading font-black text-brand-charcoal text-center uppercase whitespace-nowrap text-[clamp(72px,19vw,300px)] leading-[0.8] tracking-[-0.05em] select-none"
+      aria-hidden="true"
+    >
+      Whiddon
+    </p>
+
+    <div
+      class="mt-8 pt-6 flex flex-wrap justify-between items-center gap-4 border-t border-white/[0.08]"
+    >
+      <p class="text-gray-400 text-xs">
+        © {year} Whiddon Landscaping &amp; Lawn Care LLC. All rights reserved.
+      </p>
+      <p class="text-gray-400 text-xs tracking-[0.2em] uppercase">
+        Metro Atlanta + Surrounding Areas
+      </p>
+    </div>
+  </div>
+</footer>

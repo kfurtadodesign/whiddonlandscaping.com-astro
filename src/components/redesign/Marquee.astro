@@ -1,0 +1,24 @@
+---
+import { services } from '../../data/services';
+
+// The list is rendered twice so the -50% translate loops seamlessly.
+const items = [...services.map(s => s.title), 'Metro Atlanta + Surrounding Areas'];
+---
+
+<div class="bg-brand-yellow border-y border-brand-yellow-dk py-[22px] overflow-hidden">
+  <div class="wl-marquee flex w-max items-center">
+    {[0, 1].map(copy => (
+      <!-- The second copy exists only to make the loop seamless; hide it from AT. -->
+      <div class="flex items-center shrink-0" aria-hidden={copy === 1 ? 'true' : undefined}>
+        {items.map(item => (
+          <span
+            class="flex items-center gap-10 px-5 text-brand-ink font-heading font-black uppercase text-[clamp(28px,3.4vw,48px)] tracking-[-0.02em] whitespace-nowrap"
+          >
+            {item}
+            <i class="fa-solid fa-leaf text-brand-green text-[0.5em]"></i>
+          </span>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>

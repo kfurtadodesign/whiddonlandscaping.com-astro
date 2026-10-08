@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/whiddon-landscaping-brand-c554a5a6-bc97-4a9d-901e-be5d339ba3d4/styles.css">
+<script src="_ds/whiddon-landscaping-brand-c554a5a6-bc97-4a9d-901e-be5d339ba3d4/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#0A0A0A;}
+*{box-sizing:border-box;}
+a{color:#F8DA6D;text-decoration:none;}
+a:hover{color:#fff07a;}
+@keyframes wlMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes wlBob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+</style>
+</helmet>
+
+<div style="font-family:var(--font-body);background:#0A0A0A;color:#fff;overflow-x:hidden;">
+
+  <a href="#contact" style="position:fixed;right:24px;bottom:24px;z-index:60;display:inline-flex;align-items:center;gap:12px;background:#F8DA6D;color:#111111;font-family:var(--font-heading);font-weight:900;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;padding:18px 26px;border-radius:9999px;box-shadow:0 12px 32px rgba(0,0,0,0.35);transition:all .2s;" style-hover="background:#fff07a;color:#111111;transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.4);">Get a Free Quote <i class="fa-solid fa-arrow-right"></i></a>
+
+  <!-- NAV -->
+  <header style="position:fixed;top:16px;left:0;right:0;z-index:50;display:flex;justify-content:center;padding:0 16px;">
+    <nav style="width:100%;max-width:1280px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px 10px 10px 24px;border-radius:9999px;background:rgba(10,10,10,0.55);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.1);">
+      <a href="#top" style="display:flex;align-items:center;">
+        <img src="https://whiddonlandscaping-com-astro.vercel.app/images/whiddon-logo.svg" alt="Whiddon Landscaping" style="height:40px;width:auto;display:block;">
+      </a>
+      <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
+        <a href="#about" style="color:#fff;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;" style-hover="color:#F8DA6D;">About</a>
+        <a href="#services" style="color:#fff;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;" style-hover="color:#F8DA6D;">Services</a>
+        <a href="#process" style="color:#fff;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;" style-hover="color:#F8DA6D;">Process</a>
+        <a href="#areas" style="color:#fff;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;" style-hover="color:#F8DA6D;">Areas</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <a href="tel:+14704433344" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:9999px;border:1px solid rgba(255,255,255,0.25);color:#fff;" style-hover="background:rgba(255,255,255,0.1);color:#fff;" aria-label="Call (470) 443-3344"><i class="fa-solid fa-phone" style="font-size:14px;"></i></a>
+        <a href="#contact" style="background:#F8DA6D;color:#111111;font-family:var(--font-heading);font-weight:900;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;padding:15px 24px;border-radius:9999px;transition:all .2s;" style-hover="background:#fff07a;color:#111111;transform:translateY(-2px);">Get a Free Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" style="position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:160px 24px 48px;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:#071A09;overflow:hidden;">
+      <div class="mesh-orb orb-green"></div>
+      <div class="mesh-orb orb-blue"></div>
+      <div class="mesh-orb orb-yellow"></div>
+      <sc-if value="{{ showPhoto }}" hint-placeholder-val="{{ true }}">
+        <img src="https://whiddonlandscaping-com-astro.vercel.app/images/hero-lawn.webp" alt="Beautifully maintained Atlanta lawn at dusk" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </sc-if>
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0.75) 0%,rgba(17,17,17,0.35) 40%,rgba(10,10,10,0.92) 100%);"></div>
+
+    <div style="position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
+        <span style="width:40px;height:2px;background:#F8DA6D;"></span>
+        <p style="margin:0;color:#F8DA6D;font-family:var(--font-heading);font-weight:900;font-size:14px;letter-spacing:0.25em;text-transform:uppercase;">Metro Atlanta + Surrounding Areas</p>
+      </div>
+      <h1 style="margin:0 0 36px;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.035em;line-height:0.88;font-size:clamp(52px,10.5vw,168px);color:#fff;">
+        Lawn &amp; Home<br>
+        <span style="color:transparent;-webkit-text-stroke:2px #fff;">Maintenance</span><br>
+        Made <span style="color:#F8DA6D;">Easy.</span>
+      </h1>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-start;margin-bottom:48px;">
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:12px;background:#F8DA6D;color:#111111;font-family:var(--font-heading);font-weight:900;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;padding:20px 32px;border-radius:9999px;box-shadow:0 10px 30px rgba(248,218,109,0.25);transition:all .2s;" style-hover="background:#fff07a;color:#111111;transform:translateY(-2px);">Get a Free Quote <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="tel:+14704433344" style="display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,0.6);color:#fff;font-family:var(--font-heading);font-weight:700;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;padding:18px 30px;border-radius:9999px;transition:all .2s;" style-hover="background:rgba(255,255,255,0.1);color:#fff;"><i class="fa-solid fa-phone"></i> (470) 443-3344</a>
+        </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 48px;align-items:center;border-top:1px solid rgba(255,255,255,0.15);padding-top:32px;">
+        <p style="margin:0;flex:1 1 420px;max-width:620px;color:#d1d5db;font-size:18px;line-height:1.6;text-wrap:pretty;">Reliable, affordable lawn maintenance and exterior home upkeep that keep your property looking its best, year-round.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-start;">
+          <span style="border:2px solid #F8DA6D;color:#F8DA6D;font-family:var(--font-heading);font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:8px 16px;border-radius:9999px;">10+ Years Experience</span>
+          <span style="border:2px solid #F8DA6D;color:#F8DA6D;font-family:var(--font-heading);font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:8px 16px;border-radius:9999px;">Locally Owned</span>
+          <span style="border:2px solid #F8DA6D;color:#F8DA6D;font-family:var(--font-heading);font-weight:700;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:8px 16px;border-radius:9999px;">Licensed &amp; Insured</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#F8DA6D;color:#111111;overflow:hidden;padding:22px 0;border-top:1px solid #D4A017;border-bottom:1px solid #D4A017;">
+      {{ marquee }}
+    </div>
+  </sc-if>
+
+  <!-- ABOUT -->
+  <section id="about" style="background:#fff;color:#111111;padding:128px 24px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:64px;align-items:center;">
+        <div>
+          <p style="margin:0 0 20px;color:#1B8CC4;font-family:var(--font-heading);font-weight:900;font-size:18px;letter-spacing:0.25em;text-transform:uppercase;">Our Story</p>
+          <h2 style="margin:0 0 32px;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.03em;line-height:0.95;font-size:clamp(36px,4.6vw,68px);color:#111111;text-wrap:balance;">The dependable crew for the <span style="color:#2D7034;">everyday upkeep.</span></h2>
+          <p style="margin:0 0 20px;color:#6b7280;font-size:17px;line-height:1.7;max-width:560px;text-wrap:pretty;">Whiddon Landscaping &amp; Lawn Care LLC is a family-owned business focused on lawn maintenance and exterior home upkeep across Metro Atlanta + Surrounding Areas.</p>
+          <p style="margin:0 0 36px;color:#6b7280;font-size:17px;line-height:1.7;max-width:560px;text-wrap:pretty;">From routine mowing and seasonal cleanups to pressure washing and roof &amp; gutter cleaning, we keep your lawn and the outside of your home clean, tidy, and well-maintained — so you can enjoy your property without the work.</p>
+          <a href="#services" style="display:inline-flex;align-items:center;gap:10px;color:#1570A6;font-family:var(--font-heading);font-weight:900;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;transition:gap .2s;" style-hover="gap:16px;color:#1B8CC4;">See our services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div style="position:relative;">
+          <div style="border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:#2D7034;max-width:520px;margin-left:auto;">
+            <img src="https://whiddonlandscaping-com-astro.vercel.app/images/about-taylor.jpg" alt="Taylor Whiddon, owner of Whiddon Landscaping" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div style="position:absolute;left:0;bottom:32px;background:#111111;color:#fff;border-radius:9999px;padding:10px 24px 10px 10px;display:flex;align-items:center;gap:14px;box-shadow:0 20px 40px rgba(0,0,0,0.25);">
+            <span style="width:48px;height:48px;border-radius:9999px;background:#F8DA6D;color:#111111;display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-leaf"></i></span>
+            <div>
+              <p style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:15px;text-transform:uppercase;letter-spacing:0.04em;">Taylor Whiddon</p>
+              <p style="margin:0;color:#9ca3af;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;">Owner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:112px;border-top:2px solid #111111;">
+        <div style="padding:32px 24px 0 0;">
+          <p style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em;color:#111111;">10<span style="color:#1B8CC4;">+</span></p>
+          <p style="margin:12px 0 0;color:#6b7280;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">Years experience</p>
+        </div>
+        <div style="padding:32px 24px 0 0;">
+          <p style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em;color:#111111;">14</p>
+          <p style="margin:12px 0 0;color:#6b7280;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">Neighborhoods served</p>
+        </div>
+        <div style="padding:32px 24px 0 0;">
+          <p style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em;color:#111111;">24<span style="color:#1B8CC4;">h</span></p>
+          <p style="margin:12px 0 0;color:#6b7280;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">Quote response</p>
+        </div>
+        <div style="padding:32px 24px 0 0;">
+          <p style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:clamp(48px,6vw,88px);line-height:1;letter-spacing:-0.04em;color:#111111;">6<span style="color:#1B8CC4;">d</span></p>
+          <p style="margin:12px 0 0;color:#6b7280;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">Days a week, 7am–6pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="background:#111111;padding:128px 24px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:72px;">
+        <div>
+          <p style="margin:0 0 20px;color:#F8DA6D;font-family:var(--font-heading);font-weight:900;font-size:18px;letter-spacing:0.25em;text-transform:uppercase;">What We Offer</p>
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.03em;line-height:0.92;font-size:clamp(40px,6vw,96px);color:#fff;">Discover<br>Our Services</h2>
+        </div>
+        <p style="margin:0;max-width:380px;color:#9ca3af;font-size:16px;line-height:1.7;text-wrap:pretty;">Lawn maintenance and exterior home upkeep, done right every time. We focus on routine upkeep and basic landscaping touch-ups — not full landscape design or installation.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:56px;align-items:start;">
+        <div style="border-top:1px solid rgba(255,255,255,0.12);">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="5">
+            <div onMouseEnter="{{ s.onEnter }}" onClick="{{ s.onEnter }}" style="border-bottom:1px solid rgba(255,255,255,0.12);padding:28px 0;cursor:pointer;">
+              <div style="display:flex;align-items:center;gap:24px;">
+                <span style="font-family:var(--font-heading);font-weight:900;font-size:14px;letter-spacing:0.15em;color:{{ s.numColor }};width:32px;transition:color .3s;">{{ s.num }}</span>
+                <h3 style="flex:1;margin:0;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.02em;line-height:1;font-size:clamp(24px,2.8vw,40px);color:{{ s.titleColor }};transition:color .3s;">{{ s.title }}</h3>
+                <span style="width:48px;height:48px;flex:none;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:{{ s.btnBg }};color:{{ s.btnColor }};border:1px solid rgba(255,255,255,0.2);transition:all .3s;"><i class="fa-solid fa-arrow-right" style="transform:rotate({{ s.arrowRot }});transition:transform .3s;"></i></span>
+              </div>
+              <div style="overflow:hidden;max-height:{{ s.descMax }};opacity:{{ s.descOpacity }};transition:max-height .4s ease, opacity .4s ease;">
+                <p style="margin:16px 72px 0 56px;color:#9ca3af;font-size:15px;line-height:1.7;text-wrap:pretty;">{{ s.desc }}</p>
+              </div>
+            </div>
+          </sc-for>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:10px;margin-top:40px;background:#F8DA6D;color:#111111;font-family:var(--font-heading);font-weight:900;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;padding:18px 28px;border-radius:9999px;transition:all .2s;" style-hover="background:#fff07a;color:#111111;transform:translateY(-2px);">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div style="position:sticky;top:120px;border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:#2D7034;">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="1">
+            <div style="position:absolute;inset:0;opacity:{{ s.imgOpacity }};pointer-events:{{ s.pe }};transform:scale({{ s.imgScale }});transition:opacity .5s ease, transform .9s ease;">
+              <sc-if value="{{ s.isSlot }}" hint-placeholder-val="{{ false }}">
+                <image-slot id="{{ s.slotId }}" shape="rect" placeholder="{{ s.placeholder }}"></image-slot>
+              </sc-if>
+              <sc-if value="{{ s.isImg }}" hint-placeholder-val="{{ false }}">
+                <img src="{{ s.img }}" alt="{{ s.alt }}" style="width:100%;height:100%;object-fit:cover;display:block;">
+              </sc-if>
+            </div>
+          </sc-for>
+          <div style="pointer-events:none;position:absolute;inset:auto 0 0 0;padding:28px;background:linear-gradient(0deg,rgba(10,10,10,0.85),rgba(10,10,10,0));display:flex;justify-content:space-between;align-items:flex-end;gap:16px;">
+            <span style="font-family:var(--font-heading);font-weight:900;font-size:72px;line-height:0.8;letter-spacing:-0.04em;color:#F8DA6D;">{{ activeNum }}</span>
+            <span style="color:#fff;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">{{ activeTitle }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" style="background:#F0F9FF;color:#111111;padding:128px 24px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:64px;">
+        <div>
+          <p style="margin:0 0 20px;color:#1B8CC4;font-family:var(--font-heading);font-weight:900;font-size:18px;letter-spacing:0.25em;text-transform:uppercase;">The Process</p>
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.03em;line-height:0.92;font-size:clamp(40px,6vw,96px);color:#111111;">How It Works</h2>
+        </div>
+        <p style="margin:0;max-width:340px;color:#6b7280;font-size:16px;line-height:1.7;">Getting started is simple. Here's what to expect.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+        <div style="background:#fff;border-radius:24px;padding:32px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;transition:all .3s;" style-hover="transform:translateY(-6px);box-shadow:0 24px 48px rgba(13,43,69,0.12);">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="width:56px;height:56px;border-radius:9999px;background:#EFF6FF;color:#1B8CC4;display:flex;align-items:center;justify-content:center;font-size:20px;"><i class="fa-solid fa-phone"></i></span>
+            <span style="font-family:var(--font-heading);font-weight:900;font-size:64px;line-height:0.8;letter-spacing:-0.04em;color:#dbeafe;">01</span>
+          </div>
+          <div>
+            <h3 style="margin:0 0 10px;font-family:var(--font-heading);font-weight:900;font-size:22px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;">Call or Request Online</h3>
+            <p style="margin:0;color:#6b7280;font-size:15px;line-height:1.6;">Reach out by phone or our quote form.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:24px;padding:32px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;transition:all .3s;" style-hover="transform:translateY(-6px);box-shadow:0 24px 48px rgba(13,43,69,0.12);">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="width:56px;height:56px;border-radius:9999px;background:#EFF6FF;color:#1B8CC4;display:flex;align-items:center;justify-content:center;font-size:20px;"><i class="fa-solid fa-clipboard-check"></i></span>
+            <span style="font-family:var(--font-heading);font-weight:900;font-size:64px;line-height:0.8;letter-spacing:-0.04em;color:#dbeafe;">02</span>
+          </div>
+          <div>
+            <h3 style="margin:0 0 10px;font-family:var(--font-heading);font-weight:900;font-size:22px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;">Free Assessment</h3>
+            <p style="margin:0;color:#6b7280;font-size:15px;line-height:1.6;">We evaluate your property and give a no-obligation quote.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:24px;padding:32px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;transition:all .3s;" style-hover="transform:translateY(-6px);box-shadow:0 24px 48px rgba(13,43,69,0.12);">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="width:56px;height:56px;border-radius:9999px;background:#EFF6FF;color:#1B8CC4;display:flex;align-items:center;justify-content:center;font-size:20px;"><i class="fa-solid fa-calendar-check"></i></span>
+            <span style="font-family:var(--font-heading);font-weight:900;font-size:64px;line-height:0.8;letter-spacing:-0.04em;color:#dbeafe;">03</span>
+          </div>
+          <div>
+            <h3 style="margin:0 0 10px;font-family:var(--font-heading);font-weight:900;font-size:22px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;">Schedule Your Service</h3>
+            <p style="margin:0;color:#6b7280;font-size:15px;line-height:1.6;">Pick a time that works for you.</p>
+          </div>
+        </div>
+        <div style="background:#0D1B2A;color:#fff;border-radius:24px;padding:32px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;transition:all .3s;" style-hover="transform:translateY(-6px);box-shadow:0 24px 48px rgba(13,43,69,0.25);">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="width:56px;height:56px;border-radius:9999px;background:#F8DA6D;color:#111111;display:flex;align-items:center;justify-content:center;font-size:20px;"><i class="fa-solid fa-mug-hot"></i></span>
+            <span style="font-family:var(--font-heading);font-weight:900;font-size:64px;line-height:0.8;letter-spacing:-0.04em;color:rgba(255,255,255,0.15);">04</span>
+          </div>
+          <div>
+            <h3 style="margin:0 0 10px;font-family:var(--font-heading);font-weight:900;font-size:22px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;">Enjoy Your Property</h3>
+            <p style="margin:0;color:#9ca3af;font-size:15px;line-height:1.6;">Sit back while we do the work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="background:#0D1B2A;padding:128px 24px;position:relative;overflow:hidden;">
+    <div style="max-width:1280px;margin:0 auto;position:relative;">
+      <p style="margin:0 0 20px;color:#F8DA6D;font-family:var(--font-heading);font-weight:900;font-size:18px;letter-spacing:0.25em;text-transform:uppercase;">Don't Take Our Word For It</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px;align-items:center;margin-bottom:64px;">
+        <blockquote style="margin:0;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.02em;line-height:1.02;font-size:clamp(32px,4.4vw,64px);color:#fff;text-wrap:balance;">“Taylor does amazing work! My yard looks better than it <span style="color:#F8DA6D;">ever has.</span>”</blockquote>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+          <div style="display:flex;gap:4px;color:#F8DA6D;font-size:18px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;color:#fff;">JoAnn C.</p>
+          <p style="margin:0;color:#9ca3af;font-size:15px;line-height:1.6;max-width:320px;">Real reviews from real homeowners across Metro Atlanta + Surrounding Areas.</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+        <div style="border:1px solid rgba(255,255,255,0.12);border-radius:24px;padding:32px;background:rgba(255,255,255,0.03);">
+          <div style="display:flex;gap:3px;color:#F8DA6D;font-size:12px;margin-bottom:20px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p style="margin:0 0 24px;color:#e5e7eb;font-size:17px;line-height:1.6;">Very professional and reliable. My lawn has never looked this good!</p>
+          <p style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#9ca3af;">Shawn T.</p>
+        </div>
+        <div style="border:1px solid rgba(255,255,255,0.12);border-radius:24px;padding:32px;background:rgba(255,255,255,0.03);">
+          <div style="display:flex;gap:3px;color:#F8DA6D;font-size:12px;margin-bottom:20px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p style="margin:0 0 24px;color:#e5e7eb;font-size:17px;line-height:1.6;">Great communication and quality work. Will definitely use again!</p>
+          <p style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#9ca3af;">LaTanya M.</p>
+        </div>
+        <div style="border:1px solid rgba(255,255,255,0.12);border-radius:24px;padding:32px;background:rgba(255,255,255,0.03);">
+          <div style="display:flex;gap:3px;color:#F8DA6D;font-size:12px;margin-bottom:20px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p style="margin:0 0 24px;color:#e5e7eb;font-size:17px;line-height:1.6;">Showed up on time, did excellent work, and the price was fair.</p>
+          <p style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#9ca3af;">Chandler G.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY + AREAS -->
+  <section id="areas" style="background:#fff;color:#111111;padding:128px 24px;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:72px;">
+      <div>
+        <p style="margin:0 0 20px;color:#1B8CC4;font-family:var(--font-heading);font-weight:900;font-size:18px;letter-spacing:0.25em;text-transform:uppercase;">The Whiddon Difference</p>
+        <h2 style="margin:0 0 48px;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.03em;line-height:0.92;font-size:clamp(40px,5vw,80px);">Why Choose Us?</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px 32px;">
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <i class="fa-solid fa-house-chimney" style="color:#2D7034;font-size:22px;"></i>
+            <h3 style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:18px;text-transform:uppercase;">Family-Owned &amp; Local</h3>
+            <p style="margin:0;color:#6b7280;font-size:15px;line-height:1.6;">A local business that cares about the community it serves.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <i class="fa-solid fa-clock" style="color:#2D7034;font-size:22px;"></i>
+            <h3 style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:18px;text-transform:uppercase;">Reliable &amp; On-Time</h3>
+            <p style="margin:0;color:#6b7280;font-size:15px;line-height:1.6;">We show up when we say we will, every single time.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <i class="fa-solid fa-tag" style="color:#2D7034;font-size:22px;"></i>
+            <h3 style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:18px;text-transform:uppercase;">Affordable Pricing</h3>
+            <p style="margin:0;color:#6b7280;font-size:15px;line-height:1.6;">Fair, transparent pricing with no hidden fees.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <i class="fa-solid fa-thumbs-up" style="color:#2D7034;font-size:22px;"></i>
+            <h3 style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:18px;text-transform:uppercase;">Satisfaction Guaranteed</h3>
+            <p style="margin:0;color:#6b7280;font-size:15px;line-height:1.6;">Your satisfaction is our top priority on every job.</p>
+          </div>
+        </div>
+      </div>
+      <div style="background:#071A09;border-radius:24px;padding:48px 40px;position:relative;overflow:hidden;color:#fff;">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-84.55%2C33.62%2C-84.15%2C33.88&amp;layer=mapnik" title="Map of Metro Atlanta" loading="lazy" tabindex="-1" aria-hidden="true" style="position:absolute;inset:-60px;width:calc(100% + 120px);height:calc(100% + 120px);border:0;pointer-events:none;filter:grayscale(1) invert(1) contrast(0.9) brightness(0.9);"></iframe>
+        <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(7,26,9,0.92) 0%,rgba(7,26,9,0.72) 45%,rgba(26,74,30,0.55) 100%);mix-blend-mode:normal;"></div>
+        <div style="position:absolute;right:28%;top:46%;width:18px;height:18px;border-radius:9999px;background:#F8DA6D;box-shadow:0 0 0 8px rgba(248,218,109,0.25),0 0 0 18px rgba(248,218,109,0.1);"></div>
+        <div style="position:relative;">
+          <p style="margin:0 0 20px;color:#F8DA6D;font-family:var(--font-heading);font-weight:900;font-size:18px;letter-spacing:0.25em;text-transform:uppercase;">Where We Work</p>
+          <h3 style="margin:0 0 16px;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;font-size:clamp(28px,3vw,44px);">Serving Metro Atlanta + Surrounding Areas</h3>
+          <p style="margin:0 0 32px;color:#9ca3af;font-size:15px;line-height:1.6;">We proudly serve homeowners across these neighborhoods and beyond.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <sc-for list="{{ areas }}" as="a" hint-placeholder-count="14">
+              <span style="background:#2D7034;color:#fff;font-family:var(--font-heading);font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;padding:9px 18px;border-radius:9999px;transition:background .2s;cursor:default;" style-hover="background:#3d8f44;">{{ a }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="background:#111111;padding:128px 24px;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:64px;align-items:start;">
+      <div>
+        <p style="margin:0 0 20px;color:#F8DA6D;font-family:var(--font-heading);font-weight:900;font-size:18px;letter-spacing:0.25em;text-transform:uppercase;">Free Estimate</p>
+        <h2 style="margin:0 0 24px;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.035em;line-height:0.88;font-size:clamp(48px,7vw,112px);color:#fff;">Get a<br>Free <span style="color:#F8DA6D;">Quote</span></h2>
+        <p style="margin:0 0 48px;color:#9ca3af;font-size:18px;line-height:1.6;max-width:420px;">Tell us what you need and we'll get back to you within 24 hours.</p>
+        <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,0.12);">
+          <a href="tel:+14704433344" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.12);color:#fff;" style-hover="color:#F8DA6D;">
+            <span style="color:#9ca3af;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">Phone</span>
+            <span style="font-family:var(--font-heading);font-weight:900;font-size:22px;">(470) 443-3344</span>
+          </a>
+          <a href="mailto:whiddonllc@gmail.com" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.12);color:#fff;" style-hover="color:#F8DA6D;">
+            <span style="color:#9ca3af;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">Email</span>
+            <span style="font-family:var(--font-heading);font-weight:900;font-size:18px;">whiddonllc@gmail.com</span>
+          </a>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.12);color:#fff;">
+            <span style="color:#9ca3af;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">Hours</span>
+            <span style="font-family:var(--font-heading);font-weight:900;font-size:18px;">Mon–Sat · 7am–6pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:24px;padding:40px;color:#1C1C1C;">
+        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+          <div style="min-height:520px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:20px;">
+            <span style="width:64px;height:64px;border-radius:9999px;background:#2D7034;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;"><i class="fa-solid fa-check"></i></span>
+            <h3 style="margin:0;font-family:var(--font-heading);font-weight:900;font-size:36px;text-transform:uppercase;letter-spacing:-0.02em;line-height:1;color:#111111;">Request received.</h3>
+            <p style="margin:0;color:#6b7280;font-size:16px;line-height:1.6;max-width:380px;">Thanks! We'll get back to you within 24 hours. Need us sooner? Call (470) 443-3344.</p>
+            <button type="button" onClick="{{ reset }}" style="background:none;border:none;padding:0;cursor:pointer;color:#1570A6;font-family:var(--font-heading);font-weight:900;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;">Send another <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:20px;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+              <label style="display:flex;flex-direction:column;gap:8px;font-family:var(--font-heading);font-weight:800;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#111111;">Full Name *
+                <input required="required" type="text" placeholder="Jane Smith" style="width:100%;border:1px solid #d1d5db;border-radius:12px;padding:14px 16px;font-family:var(--font-body);font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:#1C1C1C;background:#fff;outline:none;" style-focus="border-color:transparent;box-shadow:0 0 0 2px #1570A6;">
+              </label>
+              <label style="display:flex;flex-direction:column;gap:8px;font-family:var(--font-heading);font-weight:800;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#111111;">Email Address *
+                <input required="required" type="email" placeholder="jane@email.com" style="width:100%;border:1px solid #d1d5db;border-radius:12px;padding:14px 16px;font-family:var(--font-body);font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:#1C1C1C;background:#fff;outline:none;" style-focus="border-color:transparent;box-shadow:0 0 0 2px #1570A6;">
+              </label>
+              <label style="display:flex;flex-direction:column;gap:8px;font-family:var(--font-heading);font-weight:800;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#111111;">Phone Number *
+                <input required="required" type="tel" placeholder="(470) 555-0123" style="width:100%;border:1px solid #d1d5db;border-radius:12px;padding:14px 16px;font-family:var(--font-body);font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:#1C1C1C;background:#fff;outline:none;" style-focus="border-color:transparent;box-shadow:0 0 0 2px #1570A6;">
+              </label>
+              <label style="display:flex;flex-direction:column;gap:8px;font-family:var(--font-heading);font-weight:800;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#111111;">Service Address *
+                <input required="required" type="text" placeholder="123 Main St, Decatur" style="width:100%;border:1px solid #d1d5db;border-radius:12px;padding:14px 16px;font-family:var(--font-body);font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:#1C1C1C;background:#fff;outline:none;" style-focus="border-color:transparent;box-shadow:0 0 0 2px #1570A6;">
+              </label>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <p style="margin:0;font-family:var(--font-heading);font-weight:800;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#111111;">Services Needed * <span style="color:#6b7280;font-weight:600;letter-spacing:0.05em;text-transform:none;font-family:var(--font-body);font-size:13px;">Select all that apply.</span></p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <sc-for list="{{ chips }}" as="c" hint-placeholder-count="5">
+                  <button type="button" onClick="{{ c.onToggle }}" style="display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-family:var(--font-heading);font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 18px;border-radius:9999px;border:2px solid {{ c.border }};background:{{ c.bg }};color:{{ c.color }};transition:all .2s;"><i class="{{ c.icon }}" style="font-size:11px;"></i>{{ c.title }}</button>
+                </sc-for>
+              </div>
+              <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+                <p style="margin:0;color:#b91c1c;font-size:13px;font-weight:600;">Please select at least one service.</p>
+              </sc-if>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:8px;font-family:var(--font-heading);font-weight:800;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#111111;">Message / Additional Info
+              <textarea rows="4" placeholder="Lot size, gate code, anything we should know…" style="width:100%;border:1px solid #d1d5db;border-radius:12px;padding:14px 16px;font-family:var(--font-body);font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:#1C1C1C;background:#fff;outline:none;resize:vertical;" style-focus="border-color:transparent;box-shadow:0 0 0 2px #1570A6;"></textarea>
+            </label>
+            <button type="submit" style="display:inline-flex;justify-content:center;align-items:center;gap:12px;background:#F8DA6D;color:#111111;border:none;cursor:pointer;font-family:var(--font-heading);font-weight:900;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;padding:20px 32px;border-radius:9999px;transition:all .2s;" style-hover="background:#fff07a;transform:translateY(-2px);">Send My Request <i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0A0A0A;padding:80px 24px 32px;border-top:1px solid rgba(255,255,255,0.08);overflow:hidden;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-bottom:64px;">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <img src="https://whiddonlandscaping-com-astro.vercel.app/images/whiddon-logo.svg" alt="Whiddon Landscaping" style="height:48px;width:auto;align-self:flex-start;">
+          <p style="margin:0;color:#9ca3af;font-size:14px;line-height:1.6;max-width:280px;">Lawn maintenance and exterior home upkeep in East Atlanta, Decatur, Kirkwood, and Metro Atlanta + Surrounding Areas.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <p style="margin:0 0 4px;color:#F8DA6D;font-family:var(--font-heading);font-weight:900;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">Quick Links</p>
+          <a href="#top" style="color:#9ca3af;font-size:14px;" style-hover="color:#fff;">Home</a>
+          <a href="#services" style="color:#9ca3af;font-size:14px;" style-hover="color:#fff;">Services</a>
+          <a href="#contact" style="color:#9ca3af;font-size:14px;" style-hover="color:#fff;">Get a Quote</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <p style="margin:0 0 4px;color:#F8DA6D;font-family:var(--font-heading);font-weight:900;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;">Contact Us</p>
+          <a href="tel:+14704433344" style="color:#9ca3af;font-size:14px;" style-hover="color:#fff;">(470) 443-3344</a>
+          <a href="mailto:whiddonllc@gmail.com" style="color:#9ca3af;font-size:14px;" style-hover="color:#fff;">whiddonllc@gmail.com</a>
+          <a href="https://www.facebook.com/whiddonlandscaping" style="color:#9ca3af;font-size:14px;display:inline-flex;gap:8px;align-items:center;" style-hover="color:#fff;"><i class="fa-brands fa-facebook"></i> whiddonlandscaping</a>
+        </div>
+      </div>
+      <p style="margin:0;font-family:var(--font-heading);font-weight:900;text-transform:uppercase;letter-spacing:-0.05em;line-height:0.8;font-size:clamp(72px,19vw,300px);color:#1C1C1C;white-space:nowrap;text-align:center;">Whiddon</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);">
+        <p style="margin:0;color:#9ca3af;font-size:12px;">© 2026 Whiddon Landscaping &amp; Lawn Care LLC. All rights reserved.</p>
+        <p style="margin:0;color:#9ca3af;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;">Metro Atlanta + Surrounding Areas</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;photo&quot;,&quot;mesh&quot;],&quot;default&quot;:&quot;photo&quot;,&quot;tsType&quot;:&quot;'photo'|'mesh'&quot;},&quot;showMarquee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const IMG = 'https://whiddonlandscaping-com-astro.vercel.app/images/';
+const SERVICES = [
+  { title: 'Lawn Maintenance', img: IMG + 'service-mowing.webp', alt: 'Professional lawn mowing', desc: 'Regular mowing, trimming, and edging on a schedule that fits your lawn, cut to the right height and kept consistently neat and healthy.' },
+  { title: 'Full-Service Yard Cleanup', img: IMG + 'service-cleanup.webp', alt: 'Seasonal yard cleanup', desc: 'Seasonal leaf and debris removal, bed clearing, and a complete tidy-up to get your whole yard looking sharp.' },
+  { title: 'Landscaping', img: IMG + 'service-edging.webp', alt: 'Mulch, pinestraw, and flowers', desc: 'Mulch, pinestraw, rock, fresh flowers, and other basic landscaping touch-ups to refresh your beds and borders.' },
+  { title: 'Pressure Washing', slot: true, img: '', alt: 'Pressure washing a driveway', desc: 'Blast away dirt, grime, mold, and buildup from driveways, walkways, patios, decks, and siding, leaving every surface looking new.' },
+  { title: 'Roof & Gutter Cleaning', slot: true, img: '', alt: 'Roof and gutter cleaning', desc: 'Complete roof debris removal plus a full gutter flush that clears moss, leaves, and buildup, protecting your home top to bottom.' },
+];
+const AREAS = ['East Atlanta','Decatur','Kirkwood','Edgewood','Candler Park','Little Five Points','Reynoldstown','Cabbagetown','Grant Park','Ormewood Park','East Lake','Oakhurst','Avondale Estates','Clarkston'];
+
+class Component extends DCLogic {
+  state = { active: 0, picked: [], submitted: false, error: false };
+
+  toggle(i) {
+    this.setState(s => {
+      const picked = s.picked.includes(i) ? s.picked.filter(x => x !== i) : [...s.picked, i];
+      return { picked, error: false };
+    });
+  }
+
+  marquee() {
+    const item = (t, k) => React.createElement('span', { key: k, style: { display: 'inline-flex', alignItems: 'center', gap: 40, paddingRight: 40, fontFamily: 'var(--font-heading)', fontWeight: 900, fontSize: 'clamp(28px,3.4vw,48px)', textTransform: 'uppercase', letterSpacing: '-0.02em', whiteSpace: 'nowrap', lineHeight: 1 } },
+      t, React.createElement('i', { className: 'fa-solid fa-leaf', style: { fontSize: '0.5em', color: '#2D7034' } }));
+    const run = [...SERVICES.map(s => s.title), 'Metro Atlanta + Surrounding Areas'];
+    const kids = [...run, ...run].map((t, k) => item(t, k));
+    return React.createElement('div', { style: { display: 'flex', width: 'max-content', animation: 'wlMarquee 40s linear infinite' } }, kids);
+  }
+
+  renderVals() {
+    const { active, picked, submitted, error } = this.state;
+    const services = SERVICES.map((s, i) => {
+      const on = i === active;
+      return {
+        ...s, num: String(i + 1).padStart(2, '0'),
+        onEnter: () => this.state.active !== i && this.setState({ active: i }),
+        numColor: on ? '#F8DA6D' : '#6b7280',
+        titleColor: on ? '#FFFFFF' : '#9ca3af',
+        btnBg: on ? '#F8DA6D' : 'transparent',
+        btnColor: on ? '#111111' : '#FFFFFF',
+        arrowRot: on ? '-45deg' : '0deg',
+        descMax: on ? '160px' : '0px',
+        descOpacity: on ? 1 : 0,
+        imgOpacity: on ? 1 : 0,
+        imgScale: on ? 1 : 1.08,
+        pe: on ? 'auto' : 'none',
+        isSlot: !!s.slot, isImg: !s.slot,
+        slotId: 'svc-' + i, placeholder: 'Drop a ' + s.title.toLowerCase() + ' photo',
+      };
+    });
+    const chips = SERVICES.map((s, i) => {
+      const on = picked.includes(i);
+      return { title: s.title, onToggle: () => this.toggle(i), bg: on ? '#2D7034' : '#fff', color: on ? '#fff' : '#1C1C1C', border: on ? '#2D7034' : '#d1d5db', icon: on ? 'fa-solid fa-check' : 'fa-solid fa-plus' };
+    });
+    return {
+      showPhoto: (this.props.heroStyle ?? 'photo') === 'photo',
+      showMarquee: this.props.showMarquee ?? true,
+      marquee: this.marquee(),
+      services, chips, areas: AREAS,
+      activeNum: services[active].num,
+      activeTitle: SERVICES[active].title,
+      submitted, notSubmitted: !submitted, showError: error,
+      onSubmit: (e) => {
+        e.preventDefault();
+        if (!this.state.picked.length) return this.setState({ error: true });
+        this.setState({ submitted: true });
+      },
+      reset: () => this.setState({ submitted: false, picked: [] }),
+    };
+  }
+}
+</script>
+</body>
+</html>

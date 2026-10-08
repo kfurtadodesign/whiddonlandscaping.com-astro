@@ -1,0 +1,179 @@
+---
+import { services } from '../../data/services';
+---
+
+<section id="services" class="bg-brand-ink py-32 px-6 scroll-mt-24">
+  <div class="max-w-[1280px] mx-auto">
+    <!-- Header -->
+    <div class="flex flex-wrap justify-between items-end gap-8 mb-16">
+      <div>
+        <p class="text-brand-yellow font-heading font-black text-lg tracking-[0.25em] uppercase mb-5">
+          What We Offer
+        </p>
+        <h2
+          class="font-heading font-black text-white uppercase text-[clamp(40px,6vw,96px)] leading-[0.9] tracking-[-0.03em]"
+        >
+          Discover<br />Our Services
+        </h2>
+      </div>
+      <p class="max-w-[380px] text-gray-400 text-base leading-relaxed">
+        Lawn maintenance and exterior home upkeep, done right every time. We focus on routine upkeep
+        and basic landscaping touch-ups — not full landscape design or installation.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+      <!-- Left: accordion -->
+      <div>
+        <ul id="wl-service-list" class="border-t border-white/[0.12]">
+          {services.map((service, i) => (
+            <li class="border-b border-white/[0.12]">
+              <button
+                type="button"
+                class="wl-service-row group w-full text-left py-7 cursor-pointer"
+                data-index={i}
+                aria-expanded={i === 0 ? 'true' : 'false'}
+                aria-controls={`wl-service-panel-${i}`}
+              >
+                <span class="flex items-center gap-6">
+                  <span
+                    class="wl-service-num w-8 shrink-0 font-heading font-black text-sm transition-colors duration-300"
+                  >
+                    {service.num}
+                  </span>
+                  <span
+                    class="wl-service-title grow font-heading font-black uppercase text-[clamp(24px,2.8vw,40px)] leading-none tracking-[-0.02em] transition-colors duration-300"
+                  >
+                    {service.title}
+                  </span>
+                  <span
+                    class="wl-service-arrow flex items-center justify-center w-12 h-12 shrink-0 rounded-full border border-white/25 transition-all duration-300"
+                  >
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                  </span>
+                </span>
+              </button>
+              <div
+                id={`wl-service-panel-${i}`}
+                class="wl-service-panel overflow-hidden transition-all duration-[400ms] ease-out"
+                style={i === 0 ? 'max-height:520px;opacity:1' : 'max-height:0;opacity:0'}
+              >
+                <p class="text-gray-400 text-[15px] leading-relaxed mt-4 mb-5 ml-14 mr-0 lg:mr-18">
+                  {service.description}
+                </p>
+                <!-- The sticky panel is desktop-only, so mobile gets the image inline. -->
+                <div
+                  class="lg:hidden ml-14 mb-7 aspect-[4/3] rounded-2xl overflow-hidden bg-brand-green"
+                >
+                  <img src={service.image} alt={service.alt} class="w-full h-full object-cover" />
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-3 mt-10 bg-brand-yellow hover:bg-brand-yellow-lt text-brand-ink font-heading font-black text-[13px] tracking-[0.2em] uppercase px-7 py-4 rounded-full transition-all duration-200 hover:-translate-y-0.5"
+        >
+          Get a Quote <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Right: sticky crossfading panel (desktop only) -->
+      <div class="hidden lg:block">
+        <div
+          class="sticky top-[120px] relative aspect-[4/5] rounded-3xl overflow-hidden bg-brand-green"
+        >
+          {services.map((service, i) => (
+            <img
+              src={service.image}
+              alt={service.alt}
+              class="wl-service-img absolute inset-0 w-full h-full object-cover transition-[opacity,transform] duration-500 lg:duration-[900ms]"
+              data-index={i}
+              style={i === 0 ? 'opacity:1;transform:scale(1)' : 'opacity:0;transform:scale(1.08)'}
+            />
+          ))}
+          <div
+            class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-7 bg-[linear-gradient(0deg,rgba(10,10,10,0.85)_0%,transparent_100%)]"
+          >
+            <span
+              id="wl-service-active-num"
+              class="font-heading font-black text-brand-yellow text-[72px] leading-none tracking-[-0.04em]"
+            >
+              01
+            </span>
+            <span
+              id="wl-service-active-title"
+              class="text-white font-heading font-black text-xs tracking-[0.2em] uppercase text-right pb-3"
+            >
+              Lawn Maintenance
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { services } from '../../data/services';
+
+  const rows = Array.from(document.querySelectorAll<HTMLElement>('.wl-service-row'));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>('.wl-service-panel'));
+  const images = Array.from(document.querySelectorAll<HTMLElement>('.wl-service-img'));
+  const activeNum = document.getElementById('wl-service-active-num');
+  const activeTitle = document.getElementById('wl-service-active-title');
+
+  let active = 0;
+
+  function setActive(index: number) {
+    if (index === active) return;
+    active = index;
+
+    rows.forEach((row, i) => {
+      const on = i === index;
+      const num = row.querySelector<HTMLElement>('.wl-service-num');
+      const title = row.querySelector<HTMLElement>('.wl-service-title');
+      const arrow = row.querySelector<HTMLElement>('.wl-service-arrow');
+
+      row.setAttribute('aria-expanded', String(on));
+      if (num) num.style.color = on ? '#F8DA6D' : '#6b7280';
+      if (title) title.style.color = on ? '#FFFFFF' : '#9ca3af';
+      if (arrow) {
+        arrow.style.background = on ? '#F8DA6D' : 'transparent';
+        arrow.style.borderColor = on ? '#F8DA6D' : 'rgba(255,255,255,0.25)';
+        arrow.style.color = on ? '#111111' : '#FFFFFF';
+        arrow.style.transform = on ? 'rotate(-45deg)' : 'rotate(0deg)';
+      }
+    });
+
+    panels.forEach((panel, i) => {
+      const on = i === index;
+      // Generous cap: on mobile the panel also holds an inline image.
+      panel.style.maxHeight = on ? `${panel.scrollHeight}px` : '0';
+      panel.style.opacity = on ? '1' : '0';
+    });
+
+    images.forEach((img, i) => {
+      const on = i === index;
+      img.style.opacity = on ? '1' : '0';
+      img.style.transform = on ? 'scale(1)' : 'scale(1.08)';
+    });
+
+    const service = services[index];
+    if (activeNum) activeNum.textContent = service.num;
+    if (activeTitle) activeTitle.textContent = service.title;
+  }
+
+  rows.forEach((row, i) => {
+    // Hover or click/tap activates a row, per the handoff spec.
+    row.addEventListener('mouseenter', () => setActive(i));
+    row.addEventListener('click', () => setActive(i));
+    row.addEventListener('focus', () => setActive(i));
+  });
+
+  // Paint the initial active row's colors (the markup ships the first row open).
+  active = -1;
+  setActive(0);
+</script>
